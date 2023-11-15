@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: hsl(235, 18%, 26%);
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+}
+
+#form {
+  display: flex;
+  flex-direction: row-reverse;
+  border-radius: 30px;
+  background-color: white;
+  padding:25px;
+  max-width: 850px;
+  margin: auto;
+  margin-top: 8px;
+}
+
+.container {
+  padding: 40px;
+  color: hsl(234, 29%, 20%);
+}
+
+.title {
+  font-size: 230%;
+}
+
+.container_list {
+  display: flex;
+  list-style: none;
+}
+
+.icon object {
+  display: flex;
+  padding-bottom: 7px;
+}
+
+.list li {
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.email label {
+  font-weight: bold;
+  font-size: 85%;
+}
+
+#email-valid {
+  display: flex;
+  justify-content:space-between;
+
+}
+
+#invalid_email {
+  color: red; 
+  display: none;
+  font-size: 85%;
+}
+
+.email input {
+  border-radius: 6px;
+  width: 340px;
+  border: 0.1px solid rgb(167, 165, 165);
+  padding: 15px;
+}
+
+.attribution {
+  margin-top: 12px;
+  font-size: 11px;
+  text-align: center;
+  color: white;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 600px) {
+  #form {
+    display: block;
+  }
+
+  svg {
+    width: 5px;
+    height: 3px;
+  }
+}

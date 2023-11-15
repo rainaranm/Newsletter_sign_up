@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index_style.css" />
+    <script src="script.js"></script>
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+
+  <body>
+    <form id="form" action="">
+      <div id="image"></div>
+
+      <section class="container">
+        <div class="title">
+          <h1>Stay updated!</h1>
+        </div>
+
+        <div class="info">
+          Join 60,000+ product managers receiving monthly updates on:
+          <br /><br />
+        </div>
+        <section class="container_list">
+          <div class="icon">
+            <object
+              type="image/svg+xml"
+              data="assets/svg/icon-list.svg"
+            ></object>
+            <object
+              type="image/svg+xml"
+              data="assets/svg/icon-list.svg"
+            ></object>
+            <object
+              type="image/svg+xml"
+              data="assets/svg/icon-list.svg"
+            ></object>
+          </div>
+
+          <div class="list">
+            <li>Product discovery and building what matters</li>
+            <li>Measuring to ensure updates are a success</li>
+            <li>And much more!</li>
+          </div>
+        </section>
+
+        <section class="email">
+          <br />
+
+          <section id="email-valid">
+          <label for="Email">Email address</label>
+          <div id="invalid_email" style>
+            Valid email required
+          </div>
+        </section>
+          <br />
+
+          <input id="email" type="email" placeholder="email@company.com" />
+          <br /><br />
+
+          <div class="button">
+            <button id="button" type="submit" onsubmit="">
+              Subscribe to monthly newsletter
+            </button>
+          </div>
+        </section>
+      </section>
+    </form>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Rainara Moura</a>.
+      </div>
+    </footer>
+  </body>
+
+  <script>
+    document.getElementById("form").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      var emailInput = document.getElementById("email");
+      var email = emailInput.value;
+
+      if (!isValidEmail(email)) {
+        var messageError = document.getElementById("invalid_email");
+        messageError.style.display = "inline";
+      } else {
+        localStorage.setItem("email", email);
+        window.location.href = "success.html";
+      }
+    });
+
+    function isValidEmail(email) {
+      var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+      console.log(emailRegex.test(email));
+      return emailRegex.test(email);
+    }
+  </script>
+</html>
