@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index_style.css" />
-    <script src="script.js"></script>
 
     <link
       rel="icon"
@@ -20,63 +19,67 @@
 
   <body>
     <form id="form" action="">
-      <div id="image"></div>
+      <div id="image">
+        <object
+          class="image_desktop"
+          type="image/svg+xml"
+          data="assets/svg/illustration-sign-up-desktop.svg"
+        ></object>
+
+        <object
+        class="image_mobile"
+        type="image/svg+xml"
+        data="assets/svg/illustration-sign-up-mobile.svg"
+      ></object>
+      </div>
 
       <section class="container">
         <section class="container_info">
-        <div class="title">
-          <h1>Stay updated!</h1>
-        </div>
-
-        <div class="info">
-          Join 60,000+ product managers receiving monthly updates on:
-          <br /><br />
-        </div>
-        <section class="container_list">
-          <div class="icon">
-            <object
-              type="image/svg+xml"
-              data="assets/svg/icon-list.svg"
-            ></object>
-            <object
-              type="image/svg+xml"
-              data="assets/svg/icon-list.svg"
-            ></object>
-            <object
-              type="image/svg+xml"
-              data="assets/svg/icon-list.svg"
-            ></object>
+          <div class="title">
+            <h1>Stay updated!</h1>
           </div>
 
-          <div class="list">
-            <li>Product discovery and building what matters</li>
-            <li>Measuring to ensure updates are a success</li>
-            <li>And much more!</li>
+          <div class="info">
+            Join 60,000+ product managers receiving monthly updates on:
           </div>
-        </section>
+          <section class="container_list">
+            <div class="icon">
+              <object
+                type="image/svg+xml"
+                data="assets/svg/icon-list.svg"
+              ></object>
+              <object
+                type="image/svg+xml"
+                data="assets/svg/icon-list.svg"
+              ></object>
+              <object
+                type="image/svg+xml"
+                data="assets/svg/icon-list.svg"
+              ></object>
+            </div>
+
+            <div class="list">
+              <li>Product discovery and building what matters</li>
+              <li>Measuring to ensure updates are a success</li>
+              <li>And much more!</li>
+            </div>
+          </section>
         </section>
 
-        <section class="email">
-          <br />
-
-          <div id="email-valid">
+        <section class="grid email">
           <label for="Email">Email address</label>
-          <div id="invalid_email" style>
+          <div id="invalid_email" style="display: none">
             Valid email required
           </div>
-        </div>
-     
-          <br />
-        
-          <input id="email" type="email" placeholder="ash@lorecompany.com" />
-          <br /><br />
+
+          <input id="email" type="text" placeholder="email@company.com" />
         </section>
-          <div class="button">
-            <button id="button" type="submit" onsubmit="">
-              Subscribe to monthly newsletter
-            </button>
-          </div>
-       
+
+        <div class="button">
+          <button id="button" type="submit" onsubmit="">
+            Subscribe to monthly newsletter
+          </button>
+        </div>
       </section>
     </form>
     <footer>
@@ -84,7 +87,7 @@
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="#">Rainara Moura</a>.
+        >. Coded by <a href="https://github.com/rainaranm" target="_blank">Rainara Moura</a>.
       </div>
     </footer>
   </body>
@@ -98,10 +101,15 @@
 
       if (!isValidEmail(email)) {
         var messageError = document.getElementById("invalid_email");
+
         messageError.style.display = "inline";
+        emailInput.style.background = "rgb(255 232 231)";
+        emailInput.style.outline = "0.1px solid hsl(4, 100%, 67%)";
+        emailInput.style.color = "hsl(4, 100%, 67%)";
       } else {
         localStorage.setItem("email", email);
         window.location.href = "success.html";
+        localStorage.clear;
       }
     });
 

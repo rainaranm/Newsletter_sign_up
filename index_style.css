@@ -1,14 +1,15 @@
- @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 0.99em;
+  font-size: 16px;
   background-color: hsl(235, 18%, 26%);
   display: flex;
   flex-direction: column;
-  margin: 0px;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
 }
 
 #form {
@@ -16,35 +17,36 @@ body {
   flex-direction: row-reverse;
   border-radius: 30px;
   background-color: white;
-  padding:25px;
-  padding:25px;
-  max-width: 850px;
-  padding:25px;  
-  max-width: 850px;
+  padding: 24px;
   margin: auto;
-  margin-top: 8px;
   color: hsl(234, 29%, 20%);
+  position: relative;
+}
+
+.image_mobile {
+  display: none;
 }
 
 .container {
- padding-top: 13.4px;
- padding-left: 39.8px;
- 
+  width: 376px;
+  padding-top: 12px;
+  padding-left: 40px;
+  padding-right: 65px;
 }
 
 .title h1 {
-  font-size: 55px;
+  font-size: 56px;
   margin-bottom: 0.33em;
 }
 
 .info {
   line-height: 1.6;
+  margin-bottom: 23px;
 }
 
 .container_list {
   display: flex;
   list-style: none;
-  padding-top: 25px;
 }
 
 .icon object {
@@ -57,77 +59,150 @@ body {
   padding-left: 15px;
 }
 
-.email label, #invalid_email {
-  font-weight: bold;
-  font-size: 12px;
-  padding-top: 9.5px;
+.grid {
+  margin-top: 33px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 10px);
+  justify-items: stretch;
 }
 
-.email {
-  display: grid;
-  justify-content: space-between;
-  position:relative;
-  margin: 0;
+.email label,
+#invalid_email {
+  font-weight: bold;
+  font-size: 11px;
+  grid-row: span 2;
 }
 
 #invalid_email {
-  color: red; 
+  color: hsl(4, 100%, 67%);
+  text-align: right;
 }
 
-
-
 .email input {
-  margin-top: px;
   border-radius: 6px;
-  width: 333px;
+  grid-column: span 2;
+  width: 100;
   border: 0.1px solid rgb(167, 165, 165);
-  padding: 20px;
+  padding: 18px;
   font-size: medium;
 }
 
 .email input:focus {
   outline: 0.1px solid black;
-
 }
 
 #button {
+  margin-top: 24px;
   font-family: "Roboto", sans-serif;
   border: none;
   border-radius: 6px;
-  width: 375px;
-  padding: 15px;
+  width: 100%;
+  padding: 19px;
   background: hsl(234, 29%, 20%);
   font-weight: 500;
-  font-size: 16px;
+  font-size: 15px;
   color: aliceblue;
 }
 
 #button:hover {
-  background: linear-gradient( 90deg,#ef4d73, hsl(4, 100%, 67%));
+  background: linear-gradient(90deg, #ef4d73, hsl(4, 100%, 67%));
 }
 
+
 .attribution {
-  margin-top: 12px;
+  margin-bottom: 10px;
   font-size: 11px;
   text-align: center;
   color: rgb(202, 202, 202);
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
 .attribution a {
   color: hsl(228, 17%, 55%);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width:768px) and (max-width: 928px) {
+  .container {
+    padding: 20px;
+    width: 300px;
+    margin: 0;
+  }
+
+  .title h1 {
+    font-size: 45px;
+    margin-bottom: 0.33em;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width:376px) and (max-width: 767px) {
   #form {
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+    align-items: center;
+    margin-top: 2%;
+  }
+
+  .image_mobile {
+    display: block;
+    border-radius: 20px;
+  }
+
+  .image_desktop {
+    display: none;
+  }
+
+  .container {
+    padding: 0;
+    width: 340px;
+    margin: 0;
+  }
+
+  .title h1 {
+    font-size: 40px;
+    margin-bottom: 0.33em;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    background-color: white;
+  }
+
+  #form {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    align-items: center;
+  }
+
+  .image_mobile {
     display: block;
   }
 
-  svg {
-    width: 5px;
-    height: 3px;
+  .image_desktop {
+    display: none;
+  }
+
+  .container {
+    padding: 0;
+    width: 340px;
+    margin: 0;
+  }
+
+  .title h1 {
+    font-size: 40px;
+    margin-bottom: 0.33em;
+    align-items: center;
+  }
+
+  #button {
+    margin-bottom: 10px;
+  }
+
+  .attribution {
+    color: hsl(235, 18%, 26%);
   }
 }
