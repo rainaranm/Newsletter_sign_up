@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [newsletter-sign-up-inky.vercel.app/index.html](https://newsletter-sign-up-inky.vercel.app/index.html)
 
 ### Built with
 
