@@ -3,46 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
+    <link rel="stylesheet" href="success_style.css" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
+  </head>
 
-    <title>
-      Frontend Mentor | Success message
-    </title>
+  <title>Frontend Mentor | Success message</title>
 
-    <body>
-          <!-- Success message start -->
+  <body>
+    <section class="container">
+      <div class="image">
+        <object
+          data="assets/svg/icon-success.svg"
+          type="image/svg+xml"
+        ></object>
+      </div>
 
-      <div>
+      <div class="title">
         <h1>Thanks for subscribing!</h1>
       </div>
 
-      <p id="text">
-        
-      </p>
-      
+      <p id="text"></p>
+
       <div id="dismiss_button">
-        <button>Dismiss message</button> 
+        <button>Dismiss message</button>
       </div>
+    </section>
+  </body>
 
-      <!-- Success message end -->
+  <script>
+    var email = localStorage.getItem("email");
 
+    document.getElementById("text").innerHTML =
+      "A confirmation email has been sent to <strong>" +
+      email +
+      "</strong>. Please open it and click the button inside to confirm your subscription.";
 
-      <script>
-        
-        var email = localStorage.getItem('email');
-
-        document.getElementById('text').textContent = "A confirmation email has been sent to " + email + ". Please open it and click the button inside to confirm your subscription."  
-
-        document.getElementById("dismiss_button").addEventListener("click", function() {
-          window.location.href = "index.html"
-        })
-
-      </script>
-    </body>
+    document
+      .getElementById("dismiss_button")
+      .addEventListener("click", function () {
+        window.location.href = "index.html";
+      });
+  </script>
+</html>
