@@ -1,15 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
 body {
+  margin: 0;
+  padding: 0;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
   background-color: hsl(235, 18%, 26%);
+  min-height: 100vh;
+}
+
+main {
   display: flex;
   flex-direction: column;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
+  min-height: 98vh;
 }
 
 #form {
@@ -47,7 +51,6 @@ body {
 
 .container_list {
   display: flex;
-  list-style: none;
 }
 
 .icon object {
@@ -55,9 +58,14 @@ body {
   padding-bottom: 13.5px;
 }
 
+ul {
+  list-style: none;
+  padding-left: 15px;
+  margin: 0;
+}
+
 .list li {
   padding-bottom: 15px;
-  padding-left: 15px;
 }
 
 .grid {
@@ -112,7 +120,6 @@ body {
 }
 
 .attribution {
-  margin-bottom: 10px;
   font-size: 11px;
   text-align: center;
   color: rgb(202, 202, 202);

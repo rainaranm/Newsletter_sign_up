@@ -18,70 +18,79 @@
   </head>
 
   <body>
-    <form id="form" action="">
-      <div id="image">
-        <object
-          class="image_desktop"
-          type="image/svg+xml"
-          data="assets/svg/illustration-sign-up-desktop.svg"
-        ></object>
+    <main>
+      <form id="form" action="">
+        <div id="image">
+          <object
+          title="desktop image"
+            class="image_desktop"
+            type="image/svg+xml"
+            data="assets/svg/illustration-sign-up-desktop.svg"
+          ></object>
 
-        <object
-          class="image_mobile"
-          type="image/svg+xml"
-          data="assets/svg/illustration-sign-up-mobile.svg"
-        ></object>
-      </div>
-
-      <section class="container">
-        <section class="container_info">
-          <div class="title">
-            <h1>Stay updated!</h1>
-          </div>
-
-          <div class="info">
-            Join 60,000+ product managers receiving monthly updates on:
-          </div>
-          <section class="container_list">
-            <div class="icon">
-              <object
-                type="image/svg+xml"
-                data="assets/svg/icon-list.svg"
-              ></object>
-              <object
-                type="image/svg+xml"
-                data="assets/svg/icon-list.svg"
-              ></object>
-              <object
-                type="image/svg+xml"
-                data="assets/svg/icon-list.svg"
-              ></object>
-            </div>
-
-            <div class="list">
-              <li>Product discovery and building what matters</li>
-              <li>Measuring to ensure updates are a success</li>
-              <li>And much more!</li>
-            </div>
-          </section>
-        </section>
-
-        <section class="grid email">
-          <label for="Email">Email address</label>
-          <div id="invalid_email" style="display: none">
-            Valid email required
-          </div>
-
-          <input id="email" type="text" placeholder="email@company.com" />
-        </section>
-
-        <div class="button">
-          <button id="button" type="submit" onsubmit="">
-            Subscribe to monthly newsletter
-          </button>
+          <object
+          title="mobile image"
+            class="image_mobile"
+            type="image/svg+xml"
+            data="assets/svg/illustration-sign-up-mobile.svg"
+          ></object>
         </div>
-      </section>
-    </form>
+
+        <section class="container">
+          <section class="container_info">
+            <div class="title">
+              <h1>Stay updated!</h1>
+            </div>
+
+            <div class="info">
+              Join 60,000+ product managers receiving monthly updates on:
+            </div>
+            <section class="container_list">
+              <div class="icon">
+                <object
+                title="list icon"
+                  type="image/svg+xml"
+                  data="assets/svg/icon-list.svg"
+                ></object>
+                <object
+                title="list icon"
+                  type="image/svg+xml"
+                  data="assets/svg/icon-list.svg"
+                ></object>
+                <object
+                title="list icon"
+                  type="image/svg+xml"
+                  data="assets/svg/icon-list.svg"
+                ></object>
+              </div>
+
+              <div class="list">
+                <ul>
+                  <li>Product discovery and building what matters</li>
+                  <li>Measuring to ensure updates are a success</li>
+                  <li>And much more!</li>
+                </ul>
+              </div>
+            </section>
+          </section>
+
+          <section class="grid email">
+            <label for="Email">Email address</label>
+            <div id="invalid_email" style="display: none">
+              Valid email required
+            </div>
+
+            <input id="email" type="text" placeholder="email@company.com" />
+          </section>
+
+          <div class="button">
+            <button id="button" type="submit" onsubmit="">
+              Subscribe to monthly newsletter
+            </button>
+          </div>
+        </section>
+      </form>
+    </main>
 
     <footer>
       <div class="attribution">
